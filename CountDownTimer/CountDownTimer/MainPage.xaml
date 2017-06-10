@@ -3,9 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:CountDownTimer"
              x:Class="CountDownTimer.MainPage">
+ 
 
-	<Label Text="Welcome to Xamarin Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="StartAndExpand">
+            <Label x:Name="CountDowntLabel" HorizontalTextAlignment="Center" />
+             
+            
+            <Button x:Name="btnStartStop" Text="Start" Clicked="OnBtnClicked" />
+
+
+            <Button x:Name="btnPause" IsVisible="False" Text="Reset" Clicked="OnBtnClickedReset" />
+
+        </StackLayout>
+    </ContentPage.Content>
 
 </ContentPage>
